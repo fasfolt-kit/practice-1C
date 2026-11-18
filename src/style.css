@@ -1,0 +1,69 @@
+:root { --maroon:#772432; --pink:#d9667a; --sand:#f6d9a8; --bg:#efefef; --text:#222; }
+* { box-sizing: border-box; }
+body { margin:0; font-family:'Montserrat',sans-serif; color:var(--text); background:#fff; font-size:13px; }
+a { color:inherit; text-decoration:none; }
+button { font-family:inherit; cursor:pointer; }
+.container { max-width:1280px; margin:0 auto; padding:16px; }
+.header { background:var(--maroon); border-radius:10px; height:68px; display:flex; align-items:center; padding:0 24px; }
+.brand { display:flex; align-items:center; gap:14px; color:#fff; font-size:22px; font-weight:600; }
+.panel { background:var(--bg); border-radius:10px; margin-top:16px; padding:24px; }
+
+.toolbar { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+.search { background:#fff; border-radius:4px; padding:8px 12px; width:210px; display:flex; gap:8px; }
+.search input { border:0; outline:0; width:100%; font:inherit; }
+.tabs { display:flex; gap:4px; flex:1; }
+.tabs button { background:none; border:0; padding:8px 14px; border-radius:4px; }
+.tabs button.active { background:#fff; }
+.map-btn { background:#fff; border:0; border-radius:4px; padding:8px 14px; }
+.toolbar > .map-btn:last-child { margin-left:auto; }
+
+.layout { display:grid; grid-template-columns:1fr 290px; gap:24px; align-items:start; }
+.section-title { font-size:18px; font-weight:600; margin:18px 0 10px; }
+.title-lg { margin-top:0; }
+
+.card { background:#fff; border-top:2px solid var(--maroon); border-radius:3px; padding:14px 18px; margin-bottom:12px; display:flex; gap:20px; }
+.card__img, .detail__img { width:176px; height:176px; flex:none; background:#bdbdbd; border-radius:3px; background-size:cover; background-position:center; }
+.detail__img { width:176px; height:176px; }
+.card__body, .detail__info { flex:1; min-width:0; }
+.card__top { display:flex; justify-content:space-between; gap:12px; }
+.card__top h3 { margin:0; font-size:13px; max-width:240px; }
+.badges { display:flex; gap:10px; align-items:flex-start; }
+.badge { background:var(--pink); color:#fff; font-size:10px; padding:3px 10px; border-radius:3px; white-space:nowrap; }
+.badge--outline { background:#fff; color:#222; border:1px solid var(--maroon); }
+.tag { color:var(--pink); font-size:10px; margin:4px 0; }
+.line { margin:6px 0; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.ico { width:16px; text-align:center; font-size:12px; }
+.chip { background:var(--sand); padding:4px 10px; border-radius:3px; font-size:11px; }
+.schedule { gap:8px; }
+.card__more { margin-left:auto; }
+.btn { background:var(--maroon); color:#fff; border:0; border-radius:4px; padding:9px 18px; font-size:12px; font-weight:600; display:inline-block; }
+
+.filters { display:block; border-radius:3px; }
+.f-label { display:block; font-weight:600; font-size:11px; margin:12px 0 6px; }
+.select { width:100%; border:0; border-bottom:1px solid #ccc; padding:6px 0; font:inherit; background:#fff; }
+.checks { display:flex; gap:14px; font-size:11px; }
+.catalog, .catalog__sub { list-style:none; margin:0; padding:0; }
+.catalog__row { display:flex; justify-content:space-between; width:100%; background:none; border:0; padding:7px 0; font-size:11px; text-align:left; }
+.catalog__sub { padding:0 0 4px 6px; font-size:11px; line-height:1.9; }
+.cnt { color:var(--pink); font-weight:500; margin-left:4px; }
+
+.detail { gap:20px; }
+.detail__info { position:relative; min-height:176px; }
+.detail__info .badges { position:absolute; left:0; right:0; top:0; }
+.detail__info .badges .badge:first-child { margin-right:auto; }
+.detail__info .line:first-of-type { margin-top:34px; }
+.detail__sign { position:absolute; right:0; bottom:0; }
+.block { display:block; }
+.block h4 { margin:0 0 10px; font-size:13px; color:var(--maroon); }
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.small { font-size:11px; line-height:1.5; }
+.small p { margin:2px 0; }
+.acc { display:flex; justify-content:space-between; width:100%; background:none; border:0; padding:10px 0; color:var(--maroon); font-weight:600; font-size:12px; }
+.acc--main { font-size:13px; }
+
+@media (max-width:900px) {
+  .layout, .two-col { grid-template-columns:1fr; }
+  .card { flex-direction:column; }
+  .card__img, .detail__img { width:100%; }
+  .toolbar { flex-wrap:wrap; }
+}
