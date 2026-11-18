@@ -1,3 +1,3 @@
-npm install
-npm run dev      # локальный запуск
-npm run build && npm run deploy   # публикация на GitHub Pages
+интегратор детских кружков
+
+Учебный проект: вёрстка двух страниц по макету Figma на Vue 3 + Vite
